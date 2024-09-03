@@ -1,0 +1,83 @@
+/* body.css */
+
+/* Estilo de la galería utilizando CSS Grid para una disposición uniforme en desktop */
+.gallery {
+  display: grid; /* Usar grid layout para mayor control */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Columnas flexibles para desktop */
+  gap: 15px; /* Espacio entre las tarjetas */
+  padding: 20px;
+  margin: 20px auto; /* Centra la galería dentro del contenedor */
+  max-width: 1200px; /* Limita el ancho máximo para mantener la estética */
+  width: 100%; /* Asegura que la galería ocupe todo el ancho disponible */
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: 100%; /* Mantener proporción correcta de las imágenes */
+  display: block; /* Evita espacios en línea debajo de las imágenes */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.load-more-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #343333;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #ff4d4d;
+}
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Ajusta las columnas para tablets */
+    padding: 10px; /* Ajusta padding para mejorar la presentación en pantallas más pequeñas */
+  }
+}
+
+/* Ajustes específicos para pantallas móviles */
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas móviles */
+    gap: 10px; /* Espacio reducido entre las tarjetas para móviles */
+    padding: 10px; /* Reduce el padding en móviles */
+    margin: 0 auto; /* Centra la galería */
+  }
+
+  .card {
+    max-width: 90%; /* Ajusta el ancho máximo de las tarjetas para pantallas pequeñas */
+    margin: 10px auto; /* Centra cada tarjeta horizontalmente */
+  }
+}

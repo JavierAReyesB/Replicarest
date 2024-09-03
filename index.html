@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replicarest</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/assets/Pinterest-logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#">
+          <!-- Enlace que lleva al inicio -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png"
+            alt="Pinterest Logo"
+            class="logo"
+          />
+        </a>
+        <button class="nav-btn">Inicio</button>
+        <button class="nav-btn">Explorar</button>
+        <button class="nav-btn">Crear</button>
+      </div>
+      <div class="navbar-right">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar"
+          class="search-bar"
+        />
+        <button id="search-button" class="search-icon">🔍</button>
+        <button class="icon-btn">🔔</button>
+        <button class="icon-btn">💬</button>
+      </div>
+      <button class="hamburger-menu" id="hamburger-menu">☰</button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <button class="nav-btn">Inicio</button>
+      <button class="nav-btn">Explorar</button>
+      <button class="nav-btn">Crear</button>
+    </div>
+
+    <header class="hero">
+      <h1>Descubre, Inspírate, Crea</h1>
+      <p>Explora millones de ideas e inspírate para crear algo increíble.</p>
+      <button class="cta-button">Empezar Ahora</button>
+    </header>
+
+    <!-- Body Section -->
+    <main>
+      <section class="gallery" id="gallery"></section>
+
+      <div class="load-more-container">
+        <button id="load-more" class="load-more-btn">Cargar más</button>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Sobre Nosotros</h3>
+          <p>
+            Somos una plataforma para que descubras y compartas ideas creativas.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#explore">Explorar</a></li>
+            <li><a href="#create">Crear</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <form id="contact-form">
+            <input type="email" name="email" placeholder="Tu email" required />
+            <textarea
+              name="message"
+              placeholder="Tu mensaje"
+              required
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Importación de módulos JavaScript -->
+    <script type="module" src="./components/header/header.js"></script>
+    <script type="module" src="./components/body/body.js"></script>
+    <script type="module" src="./components/footer/footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+/* header.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.nav-btn {
+  margin: 0 10px;
+  padding: 10px 15px;
+  background-color: #343333;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-btn:hover {
+  background-color: #ff4d4d;
+}
+
+.search-bar {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4b4a4a;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.search-icon {
+  margin-left: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #7a7a7a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.icon-btn:hover {
+  color: #ff6b6b;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #343333;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.cta-button:hover {
+  background-color: #ff4d4d;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Ocultar botones de navegación en la barra de navegación izquierda */
+  .navbar-left .nav-btn {
+    display: none;
+  }
+
+  /* Mostrar el menú hamburguesa */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Ajuste de la barra de navegación derecha */
+  .navbar-right {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  /* Ajuste de la barra de búsqueda y otros elementos */
+  .navbar {
+    display: flex;
+    flex-direction: row; /* Mantener elementos en una fila */
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px; /* Añade un pequeño espacio entre los elementos */
+    padding: 10px 10px; /* Ajusta padding para encajar todos los elementos */
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio reducido entre logo y barra de búsqueda */
+  }
+
+  .logo {
+    height: 30px; /* Tamaño ajustado para móvil */
+    margin-right: 5px;
+  }
+
+  .search-bar {
+    padding: 8px; /* Reducir padding interno */
+    font-size: 14px; /* Tamaño de fuente ajustado para móvil */
+    border: 1px solid #4b4a4a;
+    border-radius: 20px;
+    width: 100px; /* Ajusta el ancho para encajar en móvil */
+    max-width: 100px;
+    flex-grow: 1; /* Permitir que la barra de búsqueda se ajuste */
+    margin-right: 5px; /* Espacio entre el input y el icono */
+  }
+
+  .search-icon {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #7a7a7a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  /* Ajuste del menú móvil */
+  .mobile-menu {
+    left: 0;
+    right: 0;
+  }
+
+  /* Ocultar la sección hero en dispositivos móviles */
+  /* Ocultar solo <h1> y <p> dentro de .hero en dispositivos móviles */
+  .hero h1,
+  .hero p {
+    display: none; /* Oculta los textos dentro de la sección hero */
+  }
+  /* Ajuste del botón CTA para que sea visible y centrado */
+  .hero .cta-button {
+    display: block; /* Asegura que sea visible */
+    margin: 30px auto; /* Centra el botón horizontalmente */
+    padding: 15px 20px; /* Ajusta el padding para tamaño móvil */
+    width: 60%; /* Ancho ajustado para resaltar sin ocupar todo el espacio */
+    max-width: 250px; /* Limita el ancho máximo del botón */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    margin-bottom: -10px;
+  }
+}
